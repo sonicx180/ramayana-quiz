@@ -15,7 +15,7 @@
 		<main>
 			<div class="container">
 				<div class="quiz">
-					<div class="quiz-start">
+					<div class="quiz-start" style = "display:none;">
 						<h1>Welcome to the Ramayana Quiz !</h1>
 						<p>
 							The quiz will consist of 15 multiple-choice / true
@@ -33,13 +33,66 @@
 					<div class="quiz-questions question-one">
 						<h1>Question 1: <br /></h1>
 						<h2>How was Rama born?</h2>
-						<input type="radio" name="normal-birth" /> Born Normally
-						<input type="radio" name="normal-birth" /> Born
+						<input type="radio" name="birth" /> Born Normally <br />
+						<input type="radio" name="birth" /> Born from Wheat Grains <br />
+						<input type = "radio" name = "birth" /> Born from the ground <br/>
+						<input type = "radio" name = "birth" /> Born from Rice Grains <br />
+						<button class = "submit-btn-one"> Click to Submit </button>
+
+					</div>
+					<div class = "quiz-questions question-two" style = "display:block;">
+						<h1> Question 2: <br /> </h1> 
+						<h2> Who starts Rama's "hero's journey" ( or mentored him )</h2>
+						<input type = "radio" name = "journey" /> Dasaratha <br />
+						<input type = "radio" name = "journey" /> Vishwamitra <br />
+						<input type = "radio" name = "journey" /> Hanuman <br />
+						<button class = "submit-btn-two"> Click to Submit </button>
+					</div>
+					<div class = "quiz-questions question-three">
+						<h1> Question 3: <br /> </h1>
+						<h2> </h2>
+					</div>
+					<div class = "quiz-questions question-four">
+						
+					</div>
+					<div class = "quiz-questions question-five">
+						
+					</div>
+					<div class = "quiz-questions question-six">
+						
+					</div>
+					<div class = "quiz-questions question-seven">
+						
+					</div>
+					<div class = "quiz-questions question-eight">
+						
+					</div>
+					<div class = "quiz-questions question-nine">
+						
+					</div>
+					<div class = "quiz-questions question-ten">
+						
+					</div>
+					<div class = "quiz-questions question-eleven">
+						
+					</div>
+					<div class = "quiz-questions question-twelve">
+						
+					</div>
+					<div class = "quiz-questions question-thirteen">
+						
+					</div>
+					<div class = "quiz-questions question-fourteen">
+						
+					</div>
+					<div class = "quiz-questions question-fifteen">
+						
 					</div>
 				</div>
 			</div>
 		</main>
 		<script>
+			
 			let score = 0;
 			const startBtn = document.querySelector('.start-btn');
 
@@ -49,6 +102,23 @@
 			});
 
 			// Question 1 logic
+			document.querySelector('.submit-btn-one').addEventListener('click', () => {
+				if (document.querySelectorAll('input[name="birth"]')[3].checked) {
+					score++;
+				}
+				document.querySelector('.question-one').style.display = 'none';
+				document.querySelector('.question-two').style.display = 'block';
+			})
+
+			// Question 2 logic 
+			document.querySelector('.submit-btn-two').addEventListener('click', () => {
+				if (document.querySelectorAll('input[name="journey"]')[1].checked) {
+					score++;
+				}
+				document.querySelector('.question-two').style.display = "none";
+				document.querySelctor('.question-three').style.display = "block";
+			})
+
 		</script>
 	</body>
 </html>
