@@ -1,23 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css" />
-    <link rel = "icon" href = "download.jpg"  type="image/x-icon" />
-    <title> Ramayana Quiz - Literary Analysis </title>
-</head>
-<body>
-    <nav class = "nav">
-        <h1> The Ramayana</h1>
-    </nav>
-    <main>
-       <div class = "container">
-        <div class = "quiz">
-            <h1 class = "quiz-title"> Welcome to the Quiz! </h1>
-            <p> Click the button to start the quiz</p>
-            <button id = "start-quiz"> Start</button>
-        </div>
-       </div>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Ramayana Quiz</title>
+	</head>
+	<body>
+		<nav class="nav">
+			<h1>The Ramayana</h1>
+		</nav>
+		<main>
+			<div class="container">
+				<div class="quiz">
+					<div class="quiz-start">
+						<h1>Welcome to the Ramayana Quiz</h1>
+						<p>
+							The quiz will consist of multiple-choice questions.
+							To submit your answer, you will click a button just
+							like this <br />
+							<button class="example-btn">Click to Submit</button>
+							<br />
+							Good Luck!
+						</p>
+						<button class="start-btn">Click to start</button>
+					</div>
+					<div class="quiz-questions question-one">
+
+                    </div>
+				</div>
+			</div>
+		</main>
+        <script>
+            const startBtn = document.querySelector(".start-btn");
+            startBtn.addEventListener("click", () => {
+                document.querySelector(".quiz-start").style.display = "hidden";
+            })
+        </script>
+	</body>
 </html>

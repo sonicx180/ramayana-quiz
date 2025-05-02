@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish|Tagesschrift');
+
+:root {
+    --bg-color:#046A38;
+    --ft-color:hsl(0,0%,7%);
+    --primary-ft:'Mulish', Helvetica;
+}
+
+body {
+    background-color: var(--bg-color);
+    color:white;
+    margin:0;
+}
+
+main {
+  width:100%;
+}
+nav {
+
+}
+
+.container {
+    background-color: white;
+    max-width:25rem;
+    width:50%;
+    padding:16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.quiz {
+    color:var(--ft-color);
+    font-family:var(--primary-ft);
+    text-align:center;
+}
