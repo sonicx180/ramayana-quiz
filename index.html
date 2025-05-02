@@ -7,18 +7,23 @@
 		<title>Ramayana Quiz</title>
 	</head>
 	<body>
+        <header>
 		<nav class="nav">
 			<h1>The Ramayana</h1>
 		</nav>
+        </header>
 		<main>
 			<div class="container">
 				<div class="quiz">
 					<div class="quiz-start">
-						<h1>Welcome to the Ramayana Quiz</h1>
+						<h1>Welcome to the Ramayana Quiz !</h1>
 						<p>
-							The quiz will consist of multiple-choice questions.
-							To submit your answer, you will click a button just
-							like this <br />
+							The quiz will consist of 15 multiple-choice / true
+							or false questions. You won't be able to see your
+							final score until the end, and you won't know what
+							questions you got wrong, so try your best! To submit
+							your answer, you will click a button just like this
+							<br />
 							<button class="example-btn">Click to Submit</button>
 							<br />
 							Good Luck!
@@ -26,16 +31,24 @@
 						<button class="start-btn">Click to start</button>
 					</div>
 					<div class="quiz-questions question-one">
-
-                    </div>
+						<h1>Question 1: <br /></h1>
+						<h2>How was Rama born?</h2>
+						<input type="radio" name="normal-birth" /> Born Normally
+						<input type="radio" name="normal-birth" /> Born
+					</div>
 				</div>
 			</div>
 		</main>
-        <script>
-            const startBtn = document.querySelector(".start-btn");
-            startBtn.addEventListener("click", () => {
-                document.querySelector(".quiz-start").style.display = "hidden";
-            })
-        </script>
+		<script>
+			let score = 0;
+			const startBtn = document.querySelector('.start-btn');
+
+			startBtn.addEventListener('click', () => {
+				document.querySelector('.quiz-start').style.display = 'none';
+				document.querySelector('.question-one').style.display = 'block';
+			});
+
+			// Question 1 logic
+		</script>
 	</body>
 </html>

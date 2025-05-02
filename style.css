@@ -1,27 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish|Tagesschrift');
+@import url('https://fonts.googleapis.com/css2?family=Mulish');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift');
 
 :root {
     --bg-color:#046A38;
     --ft-color:hsl(0,0%,7%);
     --primary-ft:'Mulish', Helvetica;
+    --nav-color:#FF671F;
 }
 
 body {
     background-color: var(--bg-color);
     color:white;
     margin:0;
+    min-height:100dvh;
 }
 
 main {
   width:100%;
 }
 nav {
-
+    background-color:var(--nav-color);
 }
 
 .container {
     background-color: white;
-    max-width:25rem;
+    
     width:50%;
     padding:16px;
     position: absolute;
@@ -29,10 +32,18 @@ nav {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    border-radius:8px;
+    box-shadow:1px 1px 5px var(--ft-color);
 }
 
 .quiz {
     color:var(--ft-color);
     font-family:var(--primary-ft);
     text-align:center;
+    line-height:1.6;
 }
+
+.quiz-questions {
+    display:none;
+}
+
