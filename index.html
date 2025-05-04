@@ -40,7 +40,7 @@
 						<button class = "submit-btn-one"> Click to Submit </button>
 
 					</div>
-					<div class = "quiz-questions question-two" style = "display:block;">
+					<div class = "quiz-questions question-two">
 						<h1> Question 2: <br /> </h1> 
 						<h2> Who starts Rama's "hero's journey" ( or mentored him )</h2>
 						<input type = "radio" name = "journey" /> Dasaratha <br />
@@ -50,10 +50,20 @@
 					</div>
 					<div class = "quiz-questions question-three">
 						<h1> Question 3: <br /> </h1>
-						<h2> </h2>
+						<h2> True or false : <br /> Ravana captures Sita by putting a spell on Rama & Lakshmana  <br /> </h2> 
+						<input type = "radio" name = "capture" /> True <br />
+						<input type = "radio" name = "capture" /> False <br />
+						<button class = "submit-btn-three"> Click to Submit </button>
 					</div>
-					<div class = "quiz-questions question-four">
-						
+					<div class = "quiz-questions question-four" style = "display:block;">
+						<h1> Question 4 : <br /> </h1>
+						<h2> What hero archetype does Kaikeyi represent? <br /></h2>
+						<p> You can check multiple items</p>
+						<input type = "checkbox" name = "archetype" /> Trickster <br />
+						<input type = "checkbox" name = "archetype" /> Warrior <br /> 
+						<input type = "checkbox" name = "archetype" /> Lover <br />
+						<input type = "checkbox" name = "archetype" /> Seducer <br />
+						<button class = "submit-btn-four"> Click to Submit </button>
 					</div>
 					<div class = "quiz-questions question-five">
 						
@@ -118,7 +128,22 @@
 				document.querySelector('.question-two').style.display = "none";
 				document.querySelctor('.question-three').style.display = "block";
 			})
-
+			//Question 3 logic
+			document.querySelector('.submit-btn-three').addEventListener('click', () => {
+				if (document.querySelectorAll('input[name="capture"]')[1].checked) {
+					score ++;
+				}
+				document.querySelector('.question-three').style.display = "none";
+				document.querySelector('.question-four').style.display = "block";
+			})
+			// Question 4 logic
+			document.querySelector('.submit-btn-four').addEventListener('click', () => {
+				if(document.querySelectorAll('input[name="archetype"]')[0].checked && document.querySelectorAll('input[name="archetype"]')[3].checked) {
+					score ++;
+				}
+				document.querySelector('.question-four').style.display = "none";
+				documenet.querySelector('.question-five').style.display = "block";
+			})
 		</script>
 	</body>
 </html>
