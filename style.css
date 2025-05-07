@@ -82,6 +82,10 @@ button:hover {
 	background-color: #e65c1c;
 }
 
+button:active {
+	color:blue;
+}
+
 .quiz-questions {
 	text-align: left;
 	padding: 20px;
@@ -104,6 +108,14 @@ button:hover {
 .quiz-questions p {
 	font-size: 16px;
 	margin-bottom: 10px;
+}
+
+.quiz-questions img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	float: right;
+	margin-left: 20px;
 }
 
 @media screen and (min-width: 900px) {
